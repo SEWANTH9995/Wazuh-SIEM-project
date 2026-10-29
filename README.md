@@ -40,6 +40,8 @@ Tools: Wazuh (Manager, Indexer, Dashboard, Agent, Syscheck), Ubuntu Server 26.04
 
 References:
 
-Original guide and lab by Royden Rebello (The Social Dork)
-Wazuh documentation: https://documentation.wazuh.com
-MITRE ATT&CK: https://attack.mitre.org
+-Original guide and lab by Royden Rebello (The Social Dork)
+
+-Wazuh documentation: https://documentation.wazuh.com
+
+-MITRE ATT&CK: https://attack.mitre.org
