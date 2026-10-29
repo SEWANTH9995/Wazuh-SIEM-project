@@ -10,13 +10,20 @@ A small organisation has no budget for a commercial SIEM but needs to know when 
 
 
 3. Methodology
-Prepare: VirtualBox, Ubuntu VM with internet access, admin rights on Windows.
-Install the manager (Ubuntu): add the Wazuh GPG key, then run the all-in-one installer
+-Prepare: VirtualBox, Ubuntu VM with internet access, admin rights on Windows.
+
+-Install the manager (Ubuntu): add the Wazuh GPG key, then run the all-in-one installer
+
    curl -sO https://packages.wazuh.com/4.16/wazuh-install.sh && sudo bash ./wazuh-install.sh -a -i
-Open the dashboard at https://<ubuntu-vm-ip>. Accept the self-signed certificate warning and log in with the credentials printed at the end of installation.
-Install the agent on Windows using the official MSI with default settings.
-Register the agent: on Ubuntu run sudo /var/ossec/bin/manage_agents, add an agent (A) and extract its key (E). On Windows, paste the key into Wazuh Agent Manager, enter the manager's IP and restart the agent service.
-Enable FIM: edit C:\Program Files (x86)\ossec-agent\ossec.conf and add:
+   
+-Open the dashboard at https://<ubuntu-vm-ip>. Accept the self-signed certificate warning and log in with the credentials printed at the end of installation.
+
+-Install the agent on Windows using the official MSI with default settings.
+
+-Register the agent: on Ubuntu run sudo /var/ossec/bin/manage_agents, add an agent (A) and extract its key (E). On Windows, paste the key into Wazuh Agent Manager, enter the manager's IP and restart the agent service.
+
+-Enable FIM: edit C:\Program Files (x86)\ossec-agent\ossec.conf and add:
+
    <directories realtime="yes">C:\Users\abc\Test</directories>
 
    4. Mitigation
